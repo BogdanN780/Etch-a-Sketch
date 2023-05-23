@@ -1,0 +1,167 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: #ededed;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 80px;
+    text-align: center;
+    line-height: 0.5;
+}
+.main{
+    display: flex;
+    align-items: start; 
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-left: 450px;
+
+
+}
+
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 100px;  
+    padding: 0; 
+    box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+    
+}
+
+.square{
+    display: flex;
+    flex-wrap: wrap;
+    border: solid black px;
+    /* flex-basis: calc(100%/64);
+    height: calc(100%/64); */
+    box-sizing: border-box; 
+   
+}
+.buttons input[type="color"] {
+    margin-left: 35px;
+    margin-bottom: 20px;
+    
+  }
+  #style1 {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+  }
+  #style1::-webkit-color-swatch {
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+  }
+ 
+.color{
+    background-color: #ededed;
+    color: rgb(0, 0, 0);
+    border: solid rgb(0, 0, 0) 1px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+.color:hover{
+    transform: scale(1.2);
+}
+.eraser{
+    background-color: #ededed;
+    color: rgb(0, 0, 0);
+    border: solid rgb(0, 0, 0) 1px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+   
+}
+.erase{
+    background-color: #ededed;
+    color: rgb(0, 0, 0);
+    border: solid rgb(0, 0, 0) 1px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+.rainbow{
+    background-color: #ededed;
+    color: rgb(0, 0, 0);
+    border: solid rgb(0, 0, 0) 1px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+@keyframes rainbow {
+    0% { background-color: red; }
+    14% { background-color: orange; }
+    28% { background-color: yellow; }
+    42% { background-color: green; }
+    57% { background-color: blue; }
+    71% { background-color: indigo; }
+    85% { background-color: violet; }
+    100% { background-color: red; }
+  }
+.grids{
+    background-color: #ededed;
+    color: rgb(0, 0, 0);
+    border: solid rgb(0, 0, 0) 1px;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: medium;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+.grids:hover{
+    transform: scale(1.2);
+}
+.erase:hover{
+    transform: scale(1.2);
+}
+.eraser:hover{
+    transform: scale(1.2);
+}
+.rainbow:hover{
+    transform: scale(1.2);
+}
+
+.slider{
+    background-color: #ededed;
+    cursor: pointer;
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: medium;
+    outline: none;
+    border: solid #ededed 1px;
+}
