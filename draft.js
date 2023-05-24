@@ -13,6 +13,7 @@ const slider = document.querySelector('.slider');
 
 const square = "square";
 let colorr = "white";
+let isMouseDown = false;
 
 grid.addEventListener("input", makeDivs);
 
@@ -45,9 +46,18 @@ function makeDivs() {
         divs.style.height = heightValue;
         container.appendChild(divs);
     
-        divs.addEventListener('mouseover', function() {
-            divs.style.backgroundColor = colorr;
-        }); 
+        divs.addEventListener('mousedown', function(e) {
+            if (e.target.classList.contains(square)) {
+              isMouseDown = true;
+              e.target.style.backgroundColor = colorr;
+            }
+          });
+      
+          divs.addEventListener('mouseover', function(e) {
+            if (isMouseDown && e.target.classList.contains(square)) {
+              e.target.style.backgroundColor = colorr;
+            }
+          });
 
         let isBorderVisible = false;
         display.addEventListener('click', function() {
@@ -66,6 +76,9 @@ function makeDivs() {
             
     }
   }
+  container.addEventListener('mouseup', function() {
+    isMouseDown = false;
+  });
 
 wipe.addEventListener('click' , function(){
     Array.from(container.children).forEach((div) => {
