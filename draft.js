@@ -220,3 +220,39 @@ grid.oninput = function() {
   span2.innerHTML = this.value;
 } 
 
+const print = document.querySelector('.print');
+  print.addEventListener('click', printArea);
+
+  function printArea() {
+    const container = document.querySelector('#container');
+  
+    // Calculate the image dimensions based on the container size
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    const imageWidth = 1080;
+    const imageHeight = 1080;
+  
+    const offsetX = (imageWidth - containerWidth) / 2;
+    const offsetY = (imageHeight - containerHeight) / 2;
+  
+    container.style.width = `${imageWidth}px`;
+    container.style.height = `${imageHeight}px`;
+    container.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+  
+    html2canvas(container, { scale: 1.3, width: imageWidth , height: imageHeight  }).then(canvas => {
+    
+      const image = new Image();
+      image.src = canvas.toDataURL();
+  
+      const link = document.createElement('a');
+      link.href = image.src;
+      link.download = 'etch-a-sketch.png';
+     
+      link.click();
+  
+      container.style.width = '';
+      container.style.height = '';
+      container.style.transform = '';
+    });
+  }
+
