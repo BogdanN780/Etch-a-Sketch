@@ -166,3 +166,21 @@ h1{
     outline: none;
     border: solid #ededed 1px;
 }
+.print{
+    display: flex;
+    padding: auto;
+    margin: auto;
+    margin-top: 100px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    background-color: #ededed;
+    font-family: 'Gloria Hallelujah', cursive;
+    border: none;
+    transition: all 0.5s;
+    
+}
+.print:hover{
+    transform: scale(1.2);
+    
+}
