@@ -80,10 +80,34 @@ function makeDivs() {
     isMouseDown = false;
   });
 
-wipe.addEventListener('click' , function(){
+wipe.addEventListener('click', function() {
+    confirmationBox.style.display = 'block';
+    colorr = "white";
+    wipe.style.backgroundColor = "black";
+    wipe.style.color = "white";
+    rainbow.style.backgroundColor = "#ededed";
+    rainbow.style.color = "black";
+    erase.style.backgroundColor = "#ededed";
+    erase.style.color = "black";
+    color.style.backgroundColor = "#ededed";
+    color.style.color = "black";
+  });
+  
+  confirmYes.addEventListener('click', function() {
+    wipeOut();
+    confirmationBox.style.display = 'none';
+  });
+  
+  confirmNo.addEventListener('click', function() {
+    confirmationBox.style.display = 'none';
+  });
+  
+  function wipeOut() {
     Array.from(container.children).forEach((div) => {
-        div.style.backgroundColor = "white";
-    })
+      div.style.backgroundColor = "white";
+    });
+  
+  }
 
      colorr = "white";
     wipe.style.backgroundColor = "black";
