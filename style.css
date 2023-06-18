@@ -181,6 +181,51 @@ h1{
     
 }
 .print:hover{
+    transform: scale(1.2);   
+}
+.confirmation-box {
+    position: fixed;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ededed(72, 71, 71);
+    padding:20px;
+    text-align: center;
+
+  }
+  
+  .confirmation-box h2 {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .confirmation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .confirm-yes,
+  .confirm-no {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family:'Gloria Hallelujah', cursive;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+  }
+  .confirm-yes:hover {
     transform: scale(1.2);
-    
+  }
+  .confirm-no:hover {
+    transform: scale(1.2);
+  }
+  .confirm-yes{
+    background-color: rgb(67, 112, 67);
+    transition: all 0.5s;
+}
+.confirm-no{
+    background-color: rgb(150, 61, 61);
+    transition: all 0.5s;
 }
