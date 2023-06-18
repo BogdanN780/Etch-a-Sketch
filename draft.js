@@ -10,7 +10,9 @@ const span2 = document.querySelector('.span2');
 const grid = document.querySelector('#grid');
 const slider2 = document.querySelector('.slider2');
 const slider = document.querySelector('.slider');
-
+const confirmationBox = document.querySelector('.confirmation-box');
+const confirmYes = document.querySelector('.confirm-yes');
+const confirmNo = document.querySelector('.confirm-no');
 const square = "square";
 let colorr = "white";
 let isMouseDown = false;
@@ -109,26 +111,13 @@ wipe.addEventListener('click', function() {
   
   }
 
-     colorr = "white";
-    wipe.style.backgroundColor = "black";
-    wipe.style.color = "white";
-    rainbow.style.backgroundColor = "#ededed";
-    rainbow.style.color= "black";
-    erase.style.backgroundColor = "#ededed";
-    erase.style.color= "black";
-    color.style.backgroundColor = "#ededed";
-    color.style.color= "black";
-    input.value = "#000000";
-
-})
-
 color.addEventListener('click' , function () {
     
     colorr = input.value;
     input.oninput = () => {
         colorr = style1.value;
     }
-    input.value = "#000000";
+    
     color.style.backgroundColor = "black";
     color.style.color = "white";
     wipe.style.backgroundColor = "#ededed";
@@ -137,7 +126,7 @@ color.addEventListener('click' , function () {
     rainbow.style.color= "black";
     erase.style.backgroundColor = "#ededed";
     erase.style.color= "black";
-  colorr = "black";
+    confirmationBox.style.display = 'none';
    
 })
 
@@ -151,7 +140,7 @@ erase.addEventListener('click' , function(){
     rainbow.style.color= "black";
     color.style.backgroundColor = "#ededed";
     color.style.color= "black";
-    input.value = "#000000";
+    confirmationBox.style.display = 'none';
    
 })
 
@@ -174,7 +163,7 @@ rainbow.addEventListener('click', () => {
     }, 1);
 
     intervalId2 = setInterval(() => {
-        style1.value = getRandomColor();
+         // style1.value = getRandomColor();
     }, 300);
 });
 
@@ -182,27 +171,26 @@ color.addEventListener('click', () => {
     if (intervalId) {
         clearInterval(intervalId);
         intervalId = null;
-        style1.value = '#000000';
+        
     }
 
     if (intervalId2) {
         clearInterval(intervalId2);
         intervalId2 = null;
-        style1.value = '#000000';
+        
     }
 });
-
 erase.addEventListener('click', () => {
     if (intervalId) {
         clearInterval(intervalId);
         intervalId = null;
-        style1.value = '#000000';
+        
     }
 
     if (intervalId2) {
         clearInterval(intervalId2);
         intervalId2 = null;
-        style1.value = '#000000';
+        
     }
 });
 
@@ -210,13 +198,13 @@ wipe.addEventListener('click', () => {
     if (intervalId) {
         clearInterval(intervalId);
         intervalId = null;
-        style1.value = '#000000';
+        
     }
 
     if (intervalId2) {
         clearInterval(intervalId2);
         intervalId2 = null;
-        style1.value = '#000000';
+        
         
     }
 });
@@ -231,7 +219,7 @@ rainbow.addEventListener('click' , function (){
     color.style.color= "black";
     wipe.style.backgroundColor = "#ededed";
     wipe.style.color= "black";
-  
+    confirmationBox.style.display = 'none';
 })
   
 makeDivs();
@@ -279,4 +267,3 @@ const print = document.querySelector('.print');
       container.style.transform = '';
     });
   }
-
